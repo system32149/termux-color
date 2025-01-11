@@ -3,6 +3,27 @@ termux-color
 termux-color is a shell script to change the colorscheme of
 Termux.
 
+Requirements
+------------
+- make (if you want to install the program)
+- bash
+
+Installation
+------------
+After following the requirements, run
+
+  make install
+
+to install the program.
+
+Note that the makefile assumes you use Termux prefix.
+
+If you want to uninstall:
+
+  make uninstall
+
+to uninstall the program from Termux prefix.
+
 License
 -------
 This program is licenced under the Unlicense.
