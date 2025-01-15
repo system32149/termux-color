@@ -1,26 +1,36 @@
 #!/data/data/com.termux/files/usr/bin/bash
-# termux-color
+# termux-color - Change the colorscheme of Termux
 # License: Unlicense
+
+show_usage()
+{
+	echo "usage: termux-color [-hv] [-c colorscheme] ..."
+	exit 0
+}
+
+# Copy the colorscheme files from 'colors/file'
+# to ~/.termux/colors.properties (if the directory)
+# exists.
+copy_colorscheme()
+{
+	cp $PREFIX/share/termux-color/colors/${SELECTED_COLORSCHEME} $HOME/.termux/colors.properties
+}
 
 #
 # Options
 #
-if [ "$1" == "--help" ]; then
-	echo "Usage: termux-color [OPTION]..."
-	echo "Set the colorscheme of Termux."
-	echo
-	echo "  --help      display this help and exit"
-	echo "  --version   output version information and exit"
-	echo
-	exit 0
-	# TODO: add information to report bugs
-fi
-if [ "$1" == "--version" ]; then
-	echo "termux-color (termux-color) 1.0.0"
+if [ "$1" == "-h" ]; then
+	show_usage
+elif [ "$1" == "-v" ]; then
+	echo "termux-color (termux-color) v1.1"
 	echo "License: Unlicense <https://unlicense.org>"
 	echo "This software comes with NO WARRANTY, to the extent permitted by law."
 	echo
 	echo "Written by System32."
+	exit 0
+elif [ "$1" == "-c" ]; then
+	SELECTED_COLORSCHEME="$2"
+	copy_colorscheme
 	exit 0
 fi
 
@@ -40,14 +50,7 @@ color_list()
 	echo "[0] default"
 	echo "[1] xterm_dark"
 	echo "[2] monochrome"
-}
-
-# Copy the colorscheme files from 'colors/file'
-# to ~/.termux/colors.properties (if the directory)
-# exists.
-copy_colorscheme()
-{
-	cp $PREFIX/share/termux-color/colors/${SELECTED_COLORSCHEME} $HOME/.termux/colors.properties
+	echo "[3] default_green"
 }
 
 #
@@ -70,6 +73,10 @@ elif [ "$COLOR_OPTION" = "1" ]; then
 	restart_termux
 elif [ "$COLOR_OPTION" = "2" ]; then
 	SELECTED_COLORSCHEME="monochrome"
+	copy_colorscheme
+	restart_termux
+elif [ "$COLOR_OPTION" = "3" ]; then
+	SELECTED_COLORSCHEME="default_green"
 	copy_colorscheme
 	restart_termux
 fi
