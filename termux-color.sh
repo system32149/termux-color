@@ -4,7 +4,7 @@
 
 show_usage()
 {
-	echo "usage: termux-color [-hv] [-c colorscheme] ..."
+	echo "usage: termux-color [-hv] [-c colorscheme] [-C colorscheme]..."
 	exit 0
 }
 
@@ -31,6 +31,11 @@ elif [ "$1" == "-v" ]; then
 elif [ "$1" == "-c" ]; then
 	SELECTED_COLORSCHEME="$2"
 	copy_colorscheme
+	exit 0
+elif [ "$1" == "-C" ]; then
+	SELECTED_COLORSCHEME="$2"
+	copy_colorscheme
+	termux-reload-settings
 	exit 0
 fi
 
