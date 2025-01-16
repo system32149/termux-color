@@ -1,6 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # termux-color - Change the colorscheme of Termux
 # License: Unlicense
+VERSION="v1.4"
 
 show_usage()
 {
@@ -20,7 +21,7 @@ copy_colorscheme()
 # Options
 #
 if [ "$1" == "-v" ]; then
-	echo "termux-color (termux-color) v1.1"
+	echo "termux-color (termux-color) v$VERSION"
 	echo "License: Unlicense <https://unlicense.org>"
 	echo "This software comes with NO WARRANTY, to the extent permitted by law."
 	echo
