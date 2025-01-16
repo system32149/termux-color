@@ -1,29 +1,21 @@
-termux-color
+This README
 ============
-termux-color is a shell script to change the colorscheme of
-Termux.
+This README documents termux-color, a utility made in Bash to
+change the colorscheme of the Termux Android OS application.
 
-Requirements
-------------
-- make (if you want to install the program)
-- bash
+The documents
+=============
+This is a description of all the documents in the source.
+
+README  general information
+INSTALL installation instructions
+TODO    planned improvements and list of bugs
+COPYING	program license
 
 Installation
-------------
-After following the requirements, run
-
-  make install
-
-to install the program.
-
-Note that the makefile assumes you use Termux prefix.
-
-If you want to uninstall:
-
-  make uninstall
-
-to uninstall the program from Termux prefix.
+============
+Read the INSTALL file for installation instructions.
 
 License
--------
+=======
 This program is licenced under the Unlicense.

@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # termux-color - Change the colorscheme of Termux
 # License: Unlicense
-VERSION="v1.4"
+VERSION="1.4"
 
 show_usage()
 {
@@ -29,13 +29,25 @@ if [ "$1" == "-v" ]; then
 	exit 0
 elif [ "$1" == "-c" ]; then
 	SELECTED_COLORSCHEME="$2"
-	copy_colorscheme
-	exit 0
+	test -f ${PREFIX}/share/termux-color/colors/${2}
+	if [ "$?" == "1" ]; then
+		echo "termux-color: invalid colorscheme ${2}"
+		exit 2
+	else
+		copy_colorscheme
+		exit 0
+	fi
 elif [ "$1" == "-C" ]; then
 	SELECTED_COLORSCHEME="$2"
-	copy_colorscheme
-	termux-reload-settings
-	exit 0
+	test -f ${PREFIX}/share/termux-color/colors/${2}
+	if [ "$?" == "1" ]; then
+		echo "termux-color: invalid colorscheme ${2}"
+		exit 2
+	else
+		copy_colorscheme
+		termux-reload-settings
+		exit 0
+	fi
 elif [ $# -gt 0 ]; then
 	show_usage
 	exit 1
