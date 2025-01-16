@@ -4,7 +4,7 @@
 
 show_usage()
 {
-	echo "usage: termux-color [-hv] [-c colorscheme] [-C colorscheme]..."
+	echo "usage: termux-color [-v] [-c colorscheme] [-C colorscheme] ..."
 	exit 0
 }
 
@@ -19,9 +19,7 @@ copy_colorscheme()
 #
 # Options
 #
-if [ "$1" == "-h" ]; then
-	show_usage
-elif [ "$1" == "-v" ]; then
+if [ "$1" == "-v" ]; then
 	echo "termux-color (termux-color) v1.1"
 	echo "License: Unlicense <https://unlicense.org>"
 	echo "This software comes with NO WARRANTY, to the extent permitted by law."
@@ -37,6 +35,9 @@ elif [ "$1" == "-C" ]; then
 	copy_colorscheme
 	termux-reload-settings
 	exit 0
+elif [ $# -gt 0 ]; then
+	show_usage
+	exit 1
 fi
 
 #
