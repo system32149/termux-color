@@ -1,0 +1,42 @@
+.Dd $Mdocdate: Jan 17 2025$
+.Dt TERMUX-COLOR 1
+.Os
+.Sh NAME
+.Nm termux-color
+.Nd change the Termux colorscheme
+.Sh SYNOPSIS
+.Nm termux-color
+.Op Fl v
+.Op Fl c Ar colorscheme
+.Op Fl C Ar colorscheme
+.Ar ...
+.Sh DESCRIPTION
+The
+.Nm
+utility changes the colorscheme of Termux.
+.Pp
+The options are as follows:
+.Bl -tag -width Ds
+.It Fl v
+Print version information and exit.
+.It Fl c Ar colorscheme
+Set the colorscheme manually.
+.It Fl C Ar colorscheme
+Same as
+.Fl c ,
+but reloads Termux after setting the colorscheme.
+.El
+.Sh FILES
+.Pa $HOME/.termux/colors.properties
+.Sh EXIT STATUS
+.Ex
+.Pp
+Here's a list of values the program exits:
+.Bl -tag
+.It 0
+The program is OK, with no problems.
+.It 1
+Invalid command.
+.It 2
+Invalid colorscheme.
+.El
