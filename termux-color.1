@@ -13,7 +13,8 @@
 .Sh DESCRIPTION
 The
 .Nm
-utility changes the colorscheme of Termux.
+utility is a Bash script that changes the colorscheme of
+Termux Android OS application.
 .Pp
 The options are as follows:
 .Bl -tag -width Ds
@@ -40,3 +41,17 @@ Invalid command.
 .It 2
 Invalid colorscheme.
 .El
+.Sh EXAMPLES
+Starting the program on interactive mode:
+.Pp
+.D1 $ termux-color
+.Pp
+Setting the colorscheme directly and reloading Termux:
+.Pp
+.D1 $ termux-color -C default_green
+.Pp
+.Sh SEE ALSO
+.Xr termux 1
+.Sh AUTHORS
+.An -split
+.An System32 Aq Mt stvgmpl@gmail.com
