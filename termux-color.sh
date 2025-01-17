@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # termux-color - Change the colorscheme of Termux
 # License: Unlicense
-VERSION="1.4"
+VERSION="1.5"
 
 show_usage()
 {
