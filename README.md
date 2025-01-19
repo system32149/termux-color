@@ -2,6 +2,7 @@
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=plastic)](https://github.com/RichardLitt/standard-readme)
 ![GitHub License](https://img.shields.io/github/license/system32149/termux-color?style=plastic)
 ![GitHub Release](https://img.shields.io/github/v/release/system32149/termux-color?style=plastic)
+
 Command-line utility to change the colorscheme of [Termux](https://termux.dev).
 
 ## Install
