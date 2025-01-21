@@ -1,3 +1,4 @@
 TODO
 ====
 - Style the interactive interface using diff. colors, etc
+- Add confirmation in interactive mode that asks the user if you want to reload Termux

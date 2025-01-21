@@ -1,9 +1,9 @@
-.Dd $Mdocdate: Jan 17 2025$
+.Dd Jan 20 2025
 .Dt TERMUX-COLOR 1
 .Os
 .Sh NAME
 .Nm termux-color
-.Nd change the Termux colorscheme
+.Nd change Termux colorscheme
 .Sh SYNOPSIS
 .Nm termux-color
 .Op Fl v
@@ -11,24 +11,43 @@
 .Op Fl C Ar colorscheme
 .Ar ...
 .Sh DESCRIPTION
-The
 .Nm
-utility is a Bash script that changes the colorscheme of
-Termux Android OS application.
+is a Bash script that changes the colorscheme of
+.Xr termux 1 .
 .Pp
 The options are as follows:
 .Bl -tag -width Ds
 .It Fl v
 Print version information and exit.
 .It Fl c Ar colorscheme
-Set the colorscheme manually.
+Set the
+.Ar colorscheme
+manually.
 .It Fl C Ar colorscheme
 Same as
 .Fl c ,
-but reloads Termux after setting the colorscheme.
+but reloads Termux after setting the
+.Ar colorscheme .
 .El
+.Ss User interface
+When using interactively when running
+.Nm
+with no arguments, it starts interactively. The interface
+has a list of colorschemes, then a prompt to enter
+a colorscheme. It has to be a number.
+.Pp
+The number is seen in a entry you want to choose in
+the list. e.g:
+.Pp
+.D1 [2] monochrome
+.Pp
+will be the number 2. When you select a colorscheme,
+your Termux will reload and the colorscheme you selected
+will be applied.
 .Sh FILES
-.Pa $HOME/.termux/colors.properties
+.Bl -tag -compact
+.It Pa ~/.termux/colors.properties
+Colorscheme used by Termux.
 .Sh EXIT STATUS
 .Ex
 .Pp
@@ -37,7 +56,7 @@ Here's a list of values the program exits:
 .It 0
 The program is OK, with no problems.
 .It 1
-Invalid command.
+Invalid command or usage.
 .It 2
 Invalid colorscheme.
 .El
