@@ -12,10 +12,9 @@ install:
 	mkdir -p $(PREFIX)/share/termux-color
 	mkdir -p $(PREFIX)/share/doc/termux-color
 	$(INSTALL) termux-color.sh $(PREFIX)/bin/termux-color
-	cp README $(PREFIX)/share/doc/termux-color/README
+	cp README.md $(PREFIX)/share/doc/termux-color/README.md
 	cp COPYING $(PREFIX)/share/doc/termux-color/LICENSE
 	cp TODO $(PREFIX)/share/doc/termux-color/TODO
-	cp INSTALL $(PREFIX)/share/doc/termux-color/INSTALL
 	cp -r colors/ $(PREFIX)/share/termux-color
 	cp -r termux-color.1 $(PREFIX)/share/man/man1/termux-color.1
 
