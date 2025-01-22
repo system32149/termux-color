@@ -77,8 +77,7 @@ color_list()
 #
 echo "Select a colorscheme:"
 color_list
-echo -n "Select option: "
-read COLOR_OPTION
+read -p "Select option: " COLOR_OPTION
 
 # Set the $selected_colorscheme variable and execute the
 # aforementioned functions.
