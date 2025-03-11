@@ -1,3 +1,5 @@
+# Archive notice
+This repository is unmaintained and archived.
 # termux-color
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat)](https://github.com/RichardLitt/standard-readme)
 ![GitHub License](https://img.shields.io/github/license/system32149/termux-color?style=flat)
