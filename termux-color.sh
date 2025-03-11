@@ -84,14 +84,10 @@ read -p "Select option: " SELECTED_COLORSCHEME
 # Set the $SELECTED_COLORSCHEME variable and execute the
 # aforementioned functions.
 case $SELECTED_COLORSCHEME in
-	"0")
-		SELECTED_COLORSCHEME="default";;
-	"1")
-		SELECTED_COLORSCHEME="xterm_dark";;
-	"2")
-		SELECTED_COLORSCHEME="monochrome";;
-	"3")
-		SELECTED_COLORSCHEME="default_green";;
+	"0") SELECTED_COLORSCHEME="default" ;;
+	"1") SELECTED_COLORSCHEME="xterm_dark" ;;
+	"2") SELECTED_COLORSCHEME="monochrome" ;;
+	"3") SELECTED_COLORSCHEME="default_green" ;;
 esac
 copy_colorscheme
 restart_termux
