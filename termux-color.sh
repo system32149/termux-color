@@ -79,25 +79,19 @@ color_list()
 #
 echo "Select a colorscheme:"
 color_list
-read -p "Select option: " COLOR_OPTION
+read -p "Select option: " SELECTED_COLORSCHEME
 
-# Set the $selected_colorscheme variable and execute the
+# Set the $SELECTED_COLORSCHEME variable and execute the
 # aforementioned functions.
-case $COLOR_OPTION in
+case $SELECTED_COLORSCHEME in
 	"0")
-		SELECTED_COLORSCHEME="default"
-		copy_colorscheme
-		restart_termux ;;
+		SELECTED_COLORSCHEME="default";;
 	"1")
-		SELECTED_COLORSCHEME="xterm_dark"
-		copy_colorscheme
-		restart_termux ;;
+		SELECTED_COLORSCHEME="xterm_dark";;
 	"2")
-		SELECTED_COLORSCHEME="monochrome"
-		copy_colorscheme
-		restart_termux ;;
+		SELECTED_COLORSCHEME="monochrome";;
 	"3")
-		SELECTED_COLORSCHEME="default_green"
-		copy_colorscheme
-		restart_termux ;;
+		SELECTED_COLORSCHEME="default_green";;
 esac
+copy_colorscheme
+restart_termux
